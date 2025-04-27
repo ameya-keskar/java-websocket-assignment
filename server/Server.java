@@ -23,7 +23,12 @@ public class Server {
      */
     public void start() {
         try (ServerSocket serverSocket = new ServerSocket(portNumber)) {
-            System.out.println("Server started on port " + portNumber);
+            System.out.println(
+                "Server started on port " +
+                portNumber +
+                " Serving file: " +
+                filePath
+            );
             while (true) {
                 try (
                     Socket clientSocket = serverSocket.accept();

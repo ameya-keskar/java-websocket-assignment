@@ -93,6 +93,9 @@ public class Client {
         return wordCount;
     }
 
+    /**
+     * Method to start the client server and fetch lines of texts from the multiple servers, concurrently
+     */
     public static void main(String[] args)
         throws InterruptedException, ExecutionException {
         if (args.length != 4) {
@@ -101,13 +104,17 @@ public class Client {
             );
             return;
         }
+
         List<String> serverIPAddresses = Arrays.asList(args[0], args[2]);
         List<Integer> serverPortNumbers = Arrays.asList(
             Integer.parseInt(args[1]),
             Integer.parseInt(args[3])
         );
         Client client = new Client(serverIPAddresses, serverPortNumbers);
+        long startTime = System.currentTimeMillis();
         Map<String, Integer> wordCounts = client.fetchWordCounts();
+        long connectionTime = System.currentTimeMillis() - startTime;
+
         wordCounts
             .entrySet()
             .stream()
@@ -116,5 +123,9 @@ public class Client {
             .forEach(entry ->
                 System.out.println(entry.getKey() + ": " + entry.getValue())
             );
+        long processingTime =
+            System.currentTimeMillis() - startTime - connectionTime;
+        System.out.println("Connection time: " + connectionTime + " ms");
+        System.out.println("Processing time: " + processingTime + " ms");
     }
 }
