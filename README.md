@@ -1,4 +1,5 @@
 # Java - Client x Server communication using websockets
+![Java](https://img.shields.io/static/v1?label=Java&message=17.0.13%20LTS&color=007396&logo=java&logoColor=white)
 
 The development is done using java 17.0.13 2024-10-15 LTS
 ## Install Java
@@ -31,4 +32,4 @@ Follow along the installation steps provided by Oracle.
      cd client
      java Client.java localhost <port-number-1> localhost <port-number-2>
      ```
-  Kindly follow the order - servers have to be setup first before the client can communicate with them.
+  Kindly follow the order for setting up all the servers - servers have to be setup first before the client can communicate with them.
