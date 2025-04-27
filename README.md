@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Java - Client x Server communication using websockets
 ![Java](https://img.shields.io/static/v1?label=Java&message=17.0.13%20LTS&color=007396&logo=java&logoColor=white)
 
@@ -81,3 +82,7 @@ Pre-requisite: Needs Docker Desktop or Docker daemon installed on your machine.
     docker logs java-client
   ```
 [Note: You may create your own images from the Dockerfiles present in the respective 'client' and 'server' directories]
+=======
+# java-websocket-assignment
+Client - Server interaction using web sockets 
+>>>>>>> origin/main
