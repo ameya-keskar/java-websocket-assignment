@@ -80,3 +80,4 @@ Pre-requisite: Needs Docker Desktop or Docker daemon installed on your machine.
   ```bash
     docker logs java-client
   ```
+[Note: You may create your own images from the Dockerfiles present in the respective 'client' and 'server' directories]
